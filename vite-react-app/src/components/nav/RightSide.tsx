@@ -1,13 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class RightSide extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
+  render() {
+    return <div></div>;
+  }
 }
 
 export default RightSide;
