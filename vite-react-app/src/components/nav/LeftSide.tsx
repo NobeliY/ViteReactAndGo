@@ -1,30 +1,25 @@
-import {Component} from 'react';
-import {ReactSVG} from "react-svg";
-import Logo from "../../assets/Logo.svg";
-import GitHub from "../../assets/GitHub.svg";
+import { ReactSVG } from 'react-svg';
+import Logo from '../../assets/Logo.svg';
+import GitHub from '../../assets/GitHub.svg';
 
-class LeftSide extends Component {
-    logo = (
-        <div className="logo">
-            <ReactSVG src={Logo}/>
-            <h1>REPAER</h1>
-        </div>
-    )
-    github = (
-        <a className="github" href="https://github.com/NobeliY">
-            <ReactSVG src={GitHub}/>
-        </a>
-    );
-    render() {
+const SelfLogo = () => (
+  <div className='logo'>
+    <ReactSVG src={Logo} />
+    <h1>REPAER</h1>
+  </div>
+);
 
-        return (
-            <div className={"overlay_sides.overlay_sides_left"}>
-                {this.logo}
-                {this.github}
+const GithabLogo = () => (
+  <a className='github' href='https://github.com/NobeliY'>
+    <ReactSVG src={GitHub} />
+  </a>
+);
 
-            </div>
-        );
-    }
-}
-
-export default LeftSide;
+export const LeftSide = () => {
+  return (
+    <div className={'overlay_sides.overlay_sides_left'}>
+      <SelfLogo />
+      <GithabLogo />
+    </div>
+  );
+};
